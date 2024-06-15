@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <dialog id="post" post-dialog class="fixed w-full h-full bg-gray-500 bg-opacity-75 z-[1]">
+        <div class="fixed flex justify-center items-center w-full h-full">
+            <div class="relative space-y-5 bg-white w-[85%] lg:w-[50%] h-[90%] px-5 rounded-xl overflow-y-scroll overscroll-contain">
+                <button class="absolute bold text-2xl right-0 p-5" close>X</button>
+                <div class="post-header pr-5">
+                    <div class="text-xl font-bold" title>{post.title}</div>
+                </div>
+                <div class="post-body">
+                    <p body>{post.body}</p>
+                </div>
+                <div comments class="post-footer space-y-3">
+                    <div>Comments</div>
+                    <ul class="space-y-3 overflow-y-scroll">
+                        <li comment class="bg-blue-200 rounded-xl p-3 text-sm space-y-2">
+                            <div class="flex text-xs gap-1">
+                                <div class="w-10 bg-blue-300 rounded-full"></div>
+                                <div>
+                                    <div name>{name}</div>
+                                    <div email>{email}</div>
+                                </div>
+                            </div>
+                            <div body>{comment}</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <nav id="topbar" class="sticky top-0 left-0 bg-white w-screen flex justify-center border-b-2 border-gray-300 text-xl">
+        <button href="#" all-posts class="px-5 py-3 hover:underline">Posts</button>
+    </nav>
+    <nav id="sidebar" class="lg:fixed top-0 left-0 lg:h-screen lg:w-72 lg:overflow-y-scroll lg:pt-20 pt-5 px-5">
+        <h1 class="text-2xl mb-5">Writers</h1>
+        <ul user-list class="space-y-3">
+            <li><button user-name user-id class="hover:underline">{user.name}</button></li>
+        </ul>
+    </nav>
+    <main class="lg:ml-72 px-5 pt-5">
+        <h1 class="text-2xl mb-5" page-title hidden>{users} posts</h1>
+        <ul posts class="space-y-6">
+            <li post class="space-y-3" hidden>
+                <div class="post-header">
+                    <button title class="div text-xl font-bold text-left hover:underline">{post.title}</button>
+                    <div user class="text-sm">{user.username} | {user.name}</div>
+                </div>
+                <div class="post-body">
+                    <p body>{post.body}</p>
+                </div>
+                <div class="post-footer">
+                    <button class="hover:underline">Comments</button>
+                </div>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>
