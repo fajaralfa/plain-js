@@ -12,6 +12,8 @@ API dipanggil menggunakan fetch API builtin javascript (bukan axios).
 
 Halaman ini responsif, tampilan akan menyesuaikan dengan mobile / desktop menggunakan fitur breakpoints dari tailwindcss.
 
+Judul halaman berubah tergantung nama pembuat postingan 
+
 Halaman dari empat bagian utama: topbar, sidebar, daftar postingan, dan modal (isinya postingan dan komentar).
 
 Modal dibuat menggunakan tag dialog baru html
