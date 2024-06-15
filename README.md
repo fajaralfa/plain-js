@@ -14,6 +14,8 @@ Halaman ini responsif, tampilan akan menyesuaikan dengan mobile / desktop menggu
 
 Halaman dari empat bagian utama: topbar, sidebar, daftar postingan, dan modal (isinya postingan dan komentar).
 
+Modal dibuat menggunakan tag dialog baru html
+
 Entry point javascript adalah function main di main.js, semua yang berkaitan dengan api dan event handling saya letakkan disini. untuk function pemrosesan data dan transformasi ke DOM ada di file renderer.js. Kode yang saya buat minim side-effect, jadi kodenya lebih mudah didebug.
 
 Karena template dan layout html tidak ideal jika dibuat menggunakan javascript dan karena saya tidak memakai framework javascript seperti react / solid. Jadi saya menggunakan html langsung untuk templatenya, lalu saya clone elemen dan saya masukkan data - data yang dibutuhkan (contoh lain ada di renderer.js).
